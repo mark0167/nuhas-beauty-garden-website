@@ -1,33 +1,36 @@
-/* =========================
+/* ==================================
    NUHAS BEAUTY GARDEN
-   JAVASCRIPT
-========================= */
+   PREMIUM VERSION 2 SCRIPT
+================================== */
 
 
-// Mobile Menu
+// MOBILE MENU
 
 const menuIcon = document.querySelector(".menu-icon");
 const navLinks = document.querySelector(".nav-links");
 
 
-menuIcon.addEventListener("click", () => {
+if(menuIcon){
+
+menuIcon.addEventListener("click",()=>{
 
     navLinks.classList.toggle("active");
 
 });
 
+}
 
 
 
-// Close menu after clicking a link
+// Close mobile menu when clicking links
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+document.querySelectorAll(".nav-links a").forEach(link=>{
 
-    link.addEventListener("click", () => {
+link.addEventListener("click",()=>{
 
-        navLinks.classList.remove("active");
+    navLinks.classList.remove("active");
 
-    });
+});
 
 });
 
@@ -36,82 +39,163 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 
 
-// Scroll animation
-
-const sections = document.querySelectorAll("section");
+// NAVBAR EFFECT ON SCROLL
 
 
-const revealSection = () => {
-
-    sections.forEach(section => {
-
-        const position = section.getBoundingClientRect().top;
-
-        const screenHeight = window.innerHeight;
+const header = document.querySelector("header");
 
 
-        if(position < screenHeight - 100){
-
-            section.style.opacity = "1";
-            section.style.transform = "translateY(0)";
-
-        }
-
-    });
-
-};
+window.addEventListener("scroll",()=>{
 
 
+if(window.scrollY > 80){
 
-sections.forEach(section => {
+    header.style.boxShadow =
+    "0 10px 30px rgba(0,0,0,0.08)";
 
-    section.style.opacity = "0";
-    section.style.transform = "translateY(40px)";
-    section.style.transition = "1s ease";
+}else{
+
+    header.style.boxShadow="none";
+
+}
+
 
 });
 
 
 
-window.addEventListener("scroll", revealSection);
-
-revealSection();
 
 
 
 
+// REVEAL ANIMATION
 
 
-// Booking message generator
+const revealItems =
+document.querySelectorAll(
+"section, .service, .why-grid div, .gallery img"
+);
 
 
-function bookService(service){
 
-    const phone = "251905504444";
+revealItems.forEach(item=>{
 
-    const message =
-    `Hello Nuhas Beauty Garden, I would like to book ${service}. Please provide available times.`;
+item.style.opacity="0";
+item.style.transform="translateY(40px)";
+item.style.transition="1s ease";
 
-    const whatsappURL =
-    `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+});
 
 
-    window.open(whatsappURL, "_blank");
+
+function revealOnScroll(){
+
+
+revealItems.forEach(item=>{
+
+
+const position =
+item.getBoundingClientRect().top;
+
+
+if(position < window.innerHeight - 100){
+
+
+item.style.opacity="1";
+
+item.style.transform="translateY(0)";
+
+
+}
+
+
+});
+
+
+}
+
+
+
+window.addEventListener(
+"scroll",
+revealOnScroll
+);
+
+
+revealOnScroll();
+
+
+
+
+
+
+
+
+// SMART WHATSAPP BOOKING
+
+
+function bookAppointment(service){
+
+
+const phone =
+"251905504444";
+
+
+const message =
+`Hello Nuhas Beauty Garden. I would like to book ${service}. Please share available appointment times.`;
+
+
+const link =
+"https://wa.me/" +
+phone +
+"?text=" +
+encodeURIComponent(message);
+
+
+
+window.open(link,"_blank");
+
 
 }
 
 
 
 
-// Add current year automatically
 
 
-const footerYear = document.querySelector("footer p");
+
+// IMAGE LOADING PERFORMANCE
 
 
-if(footerYear){
+document.querySelectorAll("img").forEach(image=>{
 
-footerYear.innerHTML =
-`© ${new Date().getFullYear()} Nuhas Beauty Garden. All Rights Reserved.`;
+
+image.loading="lazy";
+
+
+});
+
+
+
+
+
+
+
+// CURRENT YEAR FOOTER
+
+
+const year =
+new Date().getFullYear();
+
+
+
+const footer =
+document.querySelector("footer p");
+
+
+if(footer){
+
+footer.innerHTML =
+`Where Beauty Meets Elegance © ${year}`;
 
 }
