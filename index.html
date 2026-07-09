@@ -6,15 +6,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nuhas Beauty Garden | Luxury Beauty Sanctuary</title>
+<title>Nuhas Beauty Garden | Luxury Beauty Experience</title>
 
-<meta name="description" content="Nuhas Beauty Garden offers luxury beauty services in Addis Ababa including hair, makeup, nails, lashes and bridal beauty experiences.">
+<meta name="description" content="Nuhas Beauty Garden offers luxury beauty treatments including hair, bridal makeup, nails, skincare and lash extensions in Addis Ababa.">
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 </head>
 
@@ -22,11 +20,10 @@
 <body>
 
 
-<!-- NAVBAR -->
-
 <header>
 
 <nav class="navbar">
+
 
 <div class="logo">
 NUHAS <span>Beauty Garden</span>
@@ -36,22 +33,22 @@ NUHAS <span>Beauty Garden</span>
 <ul class="nav-links">
 
 <li><a href="#home">Home</a></li>
-<li><a href="#story">Story</a></li>
 <li><a href="#services">Services</a></li>
+<li><a href="#experience">Experience</a></li>
 <li><a href="#bridal">Bridal</a></li>
 <li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#booking">Booking</a></li>
 
 </ul>
 
 
-<a class="booking-btn" href="https://wa.me/251905504444" target="_blank">
+<a href="#booking" class="nav-button">
 Book Now
 </a>
 
 
 <div class="menu-icon">
-<i class="fa-solid fa-bars"></i>
+☰
 </div>
 
 
@@ -65,30 +62,31 @@ Book Now
 
 <!-- HERO -->
 
-<section class="hero" id="home">
+<section id="home" class="hero">
 
 
 <div class="hero-content">
 
 
-<p class="eyebrow">
+<span>
 LUXURY BEAUTY EXPERIENCE
-</p>
+</span>
 
 
 <h1>
-Beauty Designed Around You
+Where Elegance Meets Your Natural Beauty
 </h1>
 
 
 <p>
-Discover elegant hair, makeup, nails and beauty treatments created to celebrate your confidence and style.
+Luxury treatments designed for your confidence and style.
 </p>
 
 
-<div class="hero-actions">
 
-<a href="https://wa.me/251905504444" target="_blank" class="primary-btn">
+<div class="hero-buttons">
+
+<a href="#booking" class="primary-btn">
 Book Appointment
 </a>
 
@@ -112,47 +110,48 @@ Explore Services
 
 
 
-<!-- STORY -->
+<!-- ABOUT -->
 
 
-<section id="story" class="story">
+<section class="about">
 
 
-<div class="section-heading">
+<div class="section-title">
 
-<span>OUR STORY</span>
+<span>ABOUT NUHAS</span>
 
 <h2>
-More Than A Salon.
-A Beauty Experience.
+Beauty With Elegance
 </h2>
-
 
 </div>
 
 
 
-<div class="story-grid">
+
+<div class="about-grid">
 
 
 <div>
 
 <p>
-Nuhas Beauty Garden is a premium beauty destination created for those who value elegance, confidence and personalized care.
+A premium beauty destination where professional artistry and personalized care come together.
 </p>
 
 
-<p>
-Every visit is designed to provide a relaxing luxury experience with professional beauty services and attention to detail.
-</p>
+<a href="#booking" class="primary-btn">
+Visit Us
+</a>
 
 
 </div>
 
 
+
 <img loading="lazy"
 src="https://images.unsplash.com/photo-1560066984-138dadb4c035"
-alt="Luxury beauty salon">
+alt="Luxury salon">
+
 
 </div>
 
@@ -164,55 +163,42 @@ alt="Luxury beauty salon">
 
 
 
-<!-- SERVICES -->
+
+
+
+<!-- SIGNATURE TREATMENTS -->
 
 
 <section id="services" class="services">
 
 
-<div class="section-heading">
+<div class="section-title">
 
-<span>SIGNATURE SERVICES</span>
+<span>SIGNATURE TREATMENTS</span>
 
 <h2>
-Our Beauty Collections
+Our Beauty Services
 </h2>
 
 </div>
 
 
 
-<div class="services-grid">
+<div class="service-grid">
 
 
+<div class="service-card">
 
-<div class="service">
-
-<i class="fa-solid fa-scissors"></i>
+<img loading="lazy"
+src="https://images.unsplash.com/photo-1562322140-8baeececf3df"
+alt="Hair">
 
 <h3>
-Hair Atelier
+Hair Transformation
 </h3>
 
 <p>
-Professional styling, treatments, coloring and transformations.
-</p>
-
-</div>
-
-
-
-
-<div class="service">
-
-<i class="fa-solid fa-wand-magic-sparkles"></i>
-
-<h3>
-Makeup Studio
-</h3>
-
-<p>
-Luxury bridal, event and personalized makeup artistry.
+Elegant styling and professional hair care.
 </p>
 
 </div>
@@ -221,16 +207,18 @@ Luxury bridal, event and personalized makeup artistry.
 
 
 
-<div class="service">
+<div class="service-card">
 
-<i class="fa-solid fa-hand-sparkles"></i>
+<img loading="lazy"
+src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b"
+alt="Nails">
 
 <h3>
-Nail Lounge
+Nail Artistry
 </h3>
 
 <p>
-Elegant manicure, pedicure and creative nail designs.
+Beautiful nails with creative designs.
 </p>
 
 </div>
@@ -239,16 +227,19 @@ Elegant manicure, pedicure and creative nail designs.
 
 
 
-<div class="service">
 
-<i class="fa-solid fa-eye"></i>
+<div class="service-card">
+
+<img loading="lazy"
+src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e"
+alt="Makeup">
 
 <h3>
-Lash & Brow Bar
+Bridal Makeup
 </h3>
 
 <p>
-Beautiful lashes and detailed eyebrow styling.
+Timeless beauty for your special day.
 </p>
 
 </div>
@@ -256,16 +247,41 @@ Beautiful lashes and detailed eyebrow styling.
 
 
 
-<div class="service">
 
-<i class="fa-solid fa-spa"></i>
+
+<div class="service-card">
+
+<img loading="lazy"
+src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9"
+alt="Skincare">
 
 <h3>
-Skin & Wellness
+Skincare
 </h3>
 
 <p>
-Relaxing beauty care and wellness treatments.
+Refresh and enhance your natural glow.
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="service-card">
+
+<img loading="lazy"
+src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b"
+alt="Lashes">
+
+<h3>
+Lash Extensions
+</h3>
+
+<p>
+Elegant lashes for a confident look.
 </p>
 
 </div>
@@ -281,42 +297,57 @@ Relaxing beauty care and wellness treatments.
 
 
 
-<!-- WHY CHOOSE US -->
 
 
-<section class="why">
+
+<!-- EXPERIENCE -->
 
 
-<div class="section-heading">
+<section id="experience" class="experience">
 
-<span>WHY NUHAS</span>
+
+<div class="section-title">
+
+<span>THE NUHAS EXPERIENCE</span>
 
 <h2>
-The Luxury Difference
+Designed Around You
 </h2>
 
 </div>
 
 
 
-<div class="why-grid">
+<div class="experience-grid">
 
 
 <div>
-<h3>Professional Team</h3>
-<p>Skilled beauty specialists focused on quality results.</p>
+<h3>
+Expert Artists
+</h3>
+<p>
+Professional beauty specialists.
+</p>
 </div>
 
 
 <div>
-<h3>Premium Experience</h3>
-<p>A comfortable and elegant environment for every client.</p>
+<h3>
+Premium Care
+</h3>
+<p>
+Quality products and attention.
+</p>
 </div>
 
 
 <div>
-<h3>Personal Care</h3>
-<p>Beauty solutions designed around your unique style.</p>
+<h3>
+Personal Style
+</h3>
+<p>
+Beauty that matches you.
+</p>
 </div>
 
 
@@ -324,6 +355,9 @@ The Luxury Difference
 
 
 </section>
+
+
+
 
 
 
@@ -336,32 +370,25 @@ The Luxury Difference
 <section id="bridal" class="bridal">
 
 
-<div>
-
-<span>
-BRIDAL COLLECTION
-</span>
-
-
 <h2>
-Your Wedding Day, Perfectly Beautiful
+Your Dream Day Begins Here
 </h2>
 
 
 <p>
-Complete bridal beauty packages including makeup, hairstyling and personalized preparation.
+Luxury bridal makeup and styling for unforgettable moments.
 </p>
 
 
-<a href="https://wa.me/251905504444" target="_blank" class="primary-btn">
-Request Bridal Package
+<a href="#booking" class="primary-btn">
+Bridal Booking
 </a>
 
 
-</div>
-
-
 </section>
+
+
+
 
 
 
@@ -374,30 +401,27 @@ Request Bridal Package
 <section id="gallery">
 
 
-<div class="section-heading">
+<div class="section-title">
 
-<span>OUR WORK</span>
+<span>GALLERY</span>
 
 <h2>
-Beauty Gallery
+Our Work
 </h2>
-
 
 </div>
 
 
 
-<div class="gallery">
-
-
-<img loading="lazy" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e">
+<div class="gallery-grid">
 
 <img loading="lazy" src="https://images.unsplash.com/photo-1487412912498-0447578fcca8">
 
-<img loading="lazy" src="https://images.unsplash.com/photo-1562322140-8baeececf3df">
+<img loading="lazy" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f">
+
+<img loading="lazy" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2">
 
 </div>
-
 
 
 </section>
@@ -407,21 +431,143 @@ Beauty Gallery
 
 
 
-<!-- CONTACT -->
 
 
-<section id="contact" class="contact">
+
+<!-- REVIEWS -->
 
 
-<div class="section-heading">
+<section class="reviews">
 
-<span>VISIT US</span>
+
+<div class="section-title">
+
+<span>CLIENT LOVE</span>
 
 <h2>
-Ready For Your Beauty Transformation?
+Beautiful Experiences
 </h2>
 
 </div>
+
+
+
+<div class="review-grid">
+
+
+<div>
+★★★★★
+<p>
+"Professional service and amazing results."
+</p>
+<strong>- Sarah M.</strong>
+</div>
+
+
+<div>
+★★★★★
+<p>
+"Beautiful atmosphere and perfect care."
+</p>
+<strong>- Hana T.</strong>
+</div>
+
+
+<div>
+★★★★★
+<p>
+"One of the best beauty experiences."
+</p>
+<strong>- Meron A.</strong>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- BOOKING -->
+
+
+<section id="booking" class="booking">
+
+
+<div class="section-title">
+
+<span>BOOK NOW</span>
+
+<h2>
+Reserve Your Appointment
+</h2>
+
+</div>
+
+
+
+<form id="bookingForm">
+
+
+<input id="name" type="text" placeholder="Your Name" required>
+
+
+<input id="phone" type="tel" placeholder="Phone Number" required>
+
+
+<select id="service">
+
+<option>Hair Transformation</option>
+<option>Nail Artistry</option>
+<option>Bridal Makeup</option>
+<option>Skincare</option>
+<option>Lash Extensions</option>
+
+</select>
+
+
+
+<input id="date" type="date">
+
+
+<textarea id="message" placeholder="Message"></textarea>
+
+
+
+<button type="submit">
+Send Booking
+</button>
+
+
+</form>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
+
+<section class="contact">
+
+
+<h2>
+Visit Nuhas Beauty Garden
+</h2>
 
 
 <p>
@@ -434,21 +580,14 @@ Ready For Your Beauty Transformation?
 </p>
 
 
+<p>
+Open Daily: 7:00 AM - 8:00 PM
+</p>
 
-<a class="primary-btn"
-href="https://wa.me/251905504444"
-target="_blank">
-WhatsApp Booking
+
+<a href="https://wa.me/251905504444" class="primary-btn">
+WhatsApp
 </a>
-
-
-
-<a class="secondary-btn"
-href="https://www.google.com/maps/search/?api=1&query=Nuhas+Beauty+Garden+Addis+Ababa"
-target="_blank">
-Get Directions
-</a>
-
 
 
 </section>
@@ -457,11 +596,14 @@ Get Directions
 
 
 
+
+
+
 <footer>
 
-<h3>
+<h2>
 NUHAS BEAUTY GARDEN
-</h3>
+</h2>
 
 <p>
 Where Beauty Meets Elegance
