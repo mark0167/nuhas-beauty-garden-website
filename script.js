@@ -1,7 +1,8 @@
-/* ==================================
+/* ===================================
    NUHAS BEAUTY GARDEN
-   PREMIUM VERSION 2 SCRIPT
-================================== */
+   VERSION 3 SCRIPT
+=================================== */
+
 
 
 // MOBILE MENU
@@ -22,7 +23,8 @@ menuIcon.addEventListener("click",()=>{
 
 
 
-// Close mobile menu when clicking links
+
+// CLOSE MENU AFTER CLICK
 
 document.querySelectorAll(".nav-links a").forEach(link=>{
 
@@ -39,23 +41,107 @@ link.addEventListener("click",()=>{
 
 
 
-// NAVBAR EFFECT ON SCROLL
+// BOOKING FORM TO WHATSAPP
 
 
-const header = document.querySelector("header");
+const bookingForm =
+document.getElementById("bookingForm");
+
+
+if(bookingForm){
+
+
+bookingForm.addEventListener("submit",(e)=>{
+
+
+e.preventDefault();
+
+
+
+const name =
+document.getElementById("name").value;
+
+
+const phone =
+document.getElementById("phone").value;
+
+
+const service =
+document.getElementById("service").value;
+
+
+const date =
+document.getElementById("date").value;
+
+
+const message =
+document.getElementById("message").value;
+
+
+
+const whatsappMessage =
+
+`Hello Nuhas Beauty Garden,
+
+I would like to book an appointment.
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Preferred Date: ${date}
+
+Message:
+${message}`;
+
+
+
+const whatsappURL =
+
+"https://wa.me/251905504444?text="
+
++ encodeURIComponent(whatsappMessage);
+
+
+
+window.open(
+whatsappURL,
+"_blank"
+);
+
+
+
+});
+
+
+}
+
+
+
+
+
+
+
+
+// NAVBAR SHADOW EFFECT
+
+
+const header =
+document.querySelector("header");
 
 
 window.addEventListener("scroll",()=>{
 
 
-if(window.scrollY > 80){
+if(window.scrollY > 50){
 
-    header.style.boxShadow =
-    "0 10px 30px rgba(0,0,0,0.08)";
+header.style.boxShadow =
+"0 8px 25px rgba(0,0,0,0.08)";
 
-}else{
+}
 
-    header.style.boxShadow="none";
+else{
+
+header.style.boxShadow="none";
 
 }
 
@@ -68,42 +154,54 @@ if(window.scrollY > 80){
 
 
 
-// REVEAL ANIMATION
+
+// SIMPLE SCROLL REVEAL
 
 
-const revealItems =
+const animatedElements =
 document.querySelectorAll(
-"section, .service, .why-grid div, .gallery img"
+".service-card, .experience-grid div, .review-grid div, .gallery-grid img"
 );
 
 
 
-revealItems.forEach(item=>{
+animatedElements.forEach(element=>{
 
-item.style.opacity="0";
-item.style.transform="translateY(40px)";
-item.style.transition="1s ease";
+
+element.style.opacity="0";
+
+element.style.transform=
+"translateY(30px)";
+
+element.style.transition=
+"all .8s ease";
+
 
 });
 
 
 
-function revealOnScroll(){
 
 
-revealItems.forEach(item=>{
+function reveal(){
+
+
+animatedElements.forEach(element=>{
 
 
 const position =
-item.getBoundingClientRect().top;
+element.getBoundingClientRect().top;
 
 
-if(position < window.innerHeight - 100){
+
+if(position <
+window.innerHeight - 80){
 
 
-item.style.opacity="1";
+element.style.opacity="1";
 
-item.style.transform="translateY(0)";
+element.style.transform=
+"translateY(0)";
 
 
 }
@@ -118,84 +216,23 @@ item.style.transform="translateY(0)";
 
 window.addEventListener(
 "scroll",
-revealOnScroll
+reveal
 );
 
 
-revealOnScroll();
+reveal();
 
 
 
 
 
 
+// LAZY LOAD ALL IMAGES
 
 
-// SMART WHATSAPP BOOKING
+document.querySelectorAll("img")
+.forEach(img=>{
 
-
-function bookAppointment(service){
-
-
-const phone =
-"251905504444";
-
-
-const message =
-`Hello Nuhas Beauty Garden. I would like to book ${service}. Please share available appointment times.`;
-
-
-const link =
-"https://wa.me/" +
-phone +
-"?text=" +
-encodeURIComponent(message);
-
-
-
-window.open(link,"_blank");
-
-
-}
-
-
-
-
-
-
-
-// IMAGE LOADING PERFORMANCE
-
-
-document.querySelectorAll("img").forEach(image=>{
-
-
-image.loading="lazy";
-
+img.loading="lazy";
 
 });
-
-
-
-
-
-
-
-// CURRENT YEAR FOOTER
-
-
-const year =
-new Date().getFullYear();
-
-
-
-const footer =
-document.querySelector("footer p");
-
-
-if(footer){
-
-footer.innerHTML =
-`Where Beauty Meets Elegance © ${year}`;
-
-}
