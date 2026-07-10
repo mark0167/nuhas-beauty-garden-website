@@ -1,7 +1,7 @@
-/* ===================================
+/* =====================================
    NUHAS BEAUTY GARDEN
-   VERSION 3 SCRIPT
-=================================== */
+   LUXURY SANCTUARY JAVASCRIPT
+===================================== */
 
 
 
@@ -15,7 +15,7 @@ if(menuIcon){
 
 menuIcon.addEventListener("click",()=>{
 
-    navLinks.classList.toggle("active");
+navLinks.classList.toggle("active");
 
 });
 
@@ -24,16 +24,19 @@ menuIcon.addEventListener("click",()=>{
 
 
 
-// CLOSE MENU AFTER CLICK
+// CLOSE MENU WHEN CLICKING LINK
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
+document.querySelectorAll(".nav-links a")
+.forEach(link=>{
+
 
 link.addEventListener("click",()=>{
 
-    navLinks.classList.remove("active");
+navLinks.classList.remove("active");
 
 });
 
+
 });
 
 
@@ -41,11 +44,13 @@ link.addEventListener("click",()=>{
 
 
 
-// BOOKING FORM TO WHATSAPP
+
+// RESERVATION FORM TO WHATSAPP
 
 
 const bookingForm =
 document.getElementById("bookingForm");
+
 
 
 if(bookingForm){
@@ -62,16 +67,20 @@ const name =
 document.getElementById("name").value;
 
 
+
 const phone =
 document.getElementById("phone").value;
+
 
 
 const service =
 document.getElementById("service").value;
 
 
+
 const date =
 document.getElementById("date").value;
+
 
 
 const message =
@@ -79,32 +88,42 @@ document.getElementById("message").value;
 
 
 
-const whatsappMessage =
 
-`Hello Nuhas Beauty Garden,
+const text =
 
-I would like to book an appointment.
+`Hello Nuhas Beauty Garden 🌿
 
-Name: ${name}
-Phone: ${phone}
-Service: ${service}
-Preferred Date: ${date}
+I would like to reserve a beauty experience.
 
-Message:
+Name:
+${name}
+
+Phone:
+${phone}
+
+Treatment:
+${service}
+
+Preferred Date:
+${date}
+
+Special Request:
 ${message}`;
 
 
 
-const whatsappURL =
+
+const whatsapp =
 
 "https://wa.me/251905504444?text="
 
-+ encodeURIComponent(whatsappMessage);
++ encodeURIComponent(text);
+
 
 
 
 window.open(
-whatsappURL,
+whatsapp,
 "_blank"
 );
 
@@ -112,17 +131,13 @@ whatsappURL,
 
 });
 
-
 }
 
 
 
 
 
-
-
-
-// NAVBAR SHADOW EFFECT
+// NAVBAR EFFECT
 
 
 const header =
@@ -132,16 +147,20 @@ document.querySelector("header");
 window.addEventListener("scroll",()=>{
 
 
-if(window.scrollY > 50){
+if(window.scrollY > 60){
+
 
 header.style.boxShadow =
-"0 8px 25px rgba(0,0,0,0.08)";
+"0 10px 35px rgba(0,0,0,.4)";
+
 
 }
 
 else{
 
+
 header.style.boxShadow="none";
+
 
 }
 
@@ -155,25 +174,24 @@ header.style.boxShadow="none";
 
 
 
-// SIMPLE SCROLL REVEAL
+// REVEAL ANIMATION
 
 
-const animatedElements =
-document.querySelectorAll(
-".service-card, .experience-grid div, .review-grid div, .gallery-grid img"
+const revealItems = document.querySelectorAll(
+".card, .package-grid div, .stats div, .gallery img"
 );
 
 
 
-animatedElements.forEach(element=>{
+revealItems.forEach(item=>{
 
 
-element.style.opacity="0";
+item.style.opacity="0";
 
-element.style.transform=
-"translateY(30px)";
+item.style.transform=
+"translateY(40px)";
 
-element.style.transition=
+item.style.transition=
 "all .8s ease";
 
 
@@ -186,25 +204,26 @@ element.style.transition=
 function reveal(){
 
 
-animatedElements.forEach(element=>{
+revealItems.forEach(item=>{
 
 
 const position =
-element.getBoundingClientRect().top;
+item.getBoundingClientRect().top;
 
 
 
-if(position <
-window.innerHeight - 80){
+if(position < window.innerHeight - 80){
 
 
-element.style.opacity="1";
+item.style.opacity="1";
 
-element.style.transform=
+
+item.style.transform=
 "translateY(0)";
 
 
 }
+
 
 
 });
@@ -227,12 +246,38 @@ reveal();
 
 
 
-// LAZY LOAD ALL IMAGES
+
+// IMAGE PERFORMANCE
 
 
 document.querySelectorAll("img")
-.forEach(img=>{
+.forEach(image=>{
 
-img.loading="lazy";
+
+image.loading="lazy";
+
 
 });
+
+
+
+
+
+// CURRENT YEAR FOOTER
+
+
+const footerText =
+document.querySelector("footer p");
+
+
+
+if(footerText){
+
+
+footerText.innerHTML =
+"Where Beauty Meets Elegance © "
++
+new Date().getFullYear();
+
+
+}
